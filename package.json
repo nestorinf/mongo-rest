@@ -1,0 +1,25 @@
+{
+  "name": "mongo-rest",
+  "version": "1.0.0",
+  "description": "Simple Mongo DB API REST For MicroService",
+  "main": "index.js",
+  "directories": {
+    "start": "node index.js",
+    "test": "nodemon index.js",
+    "lint": "standard"
+  },
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Nestor Infante",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  }
+}

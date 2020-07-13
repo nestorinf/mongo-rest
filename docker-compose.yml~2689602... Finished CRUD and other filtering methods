@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  app-mongo-rest:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./DockerFiles/development.Dockerfile
+    #environment:
+      #MONGO_URL: "mongodb://dbmongo:27017/test"
+    ports:
+      - 3400:3400
+    volumes:
+      - .:/usr/src # Nota, Esto aplica solo para desarrollo en ambiente de producción se debe comentar #
+      - /usr/src/node_modules # esto no me sobreescribe
+    networks:
+      - network-api
+
+networks:
+  network-api:
+     external: true
