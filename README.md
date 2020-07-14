@@ -7,6 +7,7 @@ Se debe definir METHOD segun el recurso a utilizar (POST, GET, DELETE, PUT)
 ## Create on Collection (Specifics Collection) POST
 
 Se debe especificar la colleccion y la URL es: hostname:3400/api/create/products
+
 {
 "name": "JABON BAÑO III",
 "code": "JABON-02",
