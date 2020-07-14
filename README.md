@@ -7,6 +7,7 @@ Se debe definir METHOD segun el recurso a utilizar (POST, GET, DELETE, PUT)
 ## Create on Collection (Specifics Collection) POST
 
 Se debe especificar la colleccion y la URL es: hostname:3400/api/create/products
+
 {
 "name": "JABON BAÑO III",
 "code": "JABON-02",
@@ -21,6 +22,7 @@ Se debe especificar la colleccion y la URL es: hostname:3400/api/create/products
 ## Update on Collection (Specifics Collection) PUT
 
 Se debe especificar la colleccion y la URL es: hostname:3400/api/update/products
+
 {
 "set":{
 "status":"Inactive",
@@ -48,6 +50,7 @@ Se debe especificar la colleccion y la URL es: hostname:3400/api/products
 ## Create Many On Collection (Specifics Collection) POST
 
 Se debe especificar la colleccion y la URL es: hostname:3400/api/createmany/products
+
 [
 {
 "name": "JABON POLVO I",
@@ -74,6 +77,7 @@ Se debe especificar la colleccion y la URL es: hostname:3400/api/createmany/prod
 ## JOIN On Collection (Specifics Collection) POST
 
 Se debe especificar la colleccion y la URL es: hostname:3400/api/join/categories
+
 {
 "from": "products",
 "localField": "id",
@@ -84,6 +88,7 @@ Se debe especificar la colleccion y la URL es: hostname:3400/api/join/categories
 ## Query On Collecton (Specifics Collection) POST
 
 Se debe especificar la colleccion y la URL es: hostname:3400/api/query/products
+
 
 {
 "code": "AR-4",
