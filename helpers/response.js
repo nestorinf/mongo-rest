@@ -24,8 +24,8 @@ exports.responseData = (response) => {
   const { n, ok } = response.result
   const { ops } = response
   return {
+    ops,
     n,
-    ok,
-    ops
+    ok
   }
 }

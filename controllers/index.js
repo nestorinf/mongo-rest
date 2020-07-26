@@ -23,6 +23,21 @@ const findByIDCollection = async (req, res) => {
   }
 }
 
+const findInCollection = async (req,res) => {
+  const { collection } = req.params
+  const query = req.body
+  const dbmongo = req.app.get('dbmongo')
+  try {
+    if (Object.keys(query).length === 0) {
+      errorHandler('no se ha definido QUERY')
+    }
+    const result = await dbmongo.findIn(collection, query)
+    success(req, res, result)
+  } catch (err) {
+    error(req, res, err)
+  }
+}
+
 const queryCollection = async (req, res) => {
   const { collection } = req.params
   const query = req.body
@@ -37,6 +52,8 @@ const queryCollection = async (req, res) => {
     error(req, res, err)
   }
 }
+
+
 
 const searchCollection = async (req, res) => {
   const { collection } = req.params
@@ -120,6 +137,7 @@ const createMany = async (req, res) => {
 module.exports = {
   findCollection,
   findByIDCollection,
+  findInCollection,
   queryCollection,
   create,
   update,

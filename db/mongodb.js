@@ -70,6 +70,21 @@ class MongoDB {
     }
   }
 
+  async findIn(collection,query) {
+    const {field, values } = query
+    let objectQuery = {}
+    objectQuery[field] = { $in:values }
+    try {
+      const { db } = this.client
+      const result = await db.collection(`${collection}`).find(objectQuery).toArray()
+      emptyCollection(result)
+      return result
+    } catch (error) {
+      console.log(error)
+      errorHandler(error)
+    }
+  }
+
   async create (collection, data) {
     try {
       const { db } = this.client

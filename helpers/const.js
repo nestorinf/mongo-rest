@@ -12,10 +12,10 @@ module.exports = {
   },
 
   MONGO_CREDENTIAL: {
-    HOST: process.env.MONGO_HOST || 'clusterapi-yvsd3.mongodb.net',
-    PORT: process.env.MONGO_PORT || '27017',
-    USER: process.env.MONGO_USER || 'admin',
-    PASS: process.env.MONGO_PASS || 'admin',
-    DBNAME: process.env.MONGO_DB || 'test'
+    HOST: process.env.MONGO_HOST || '',
+    PORT: process.env.MONGO_PORT || '',
+    USER: process.env.MONGO_USER || '',
+    PASS: process.env.MONGO_PASS || '',
+    DBNAME: process.env.MONGO_DB || ''
   }
 }

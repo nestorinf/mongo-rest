@@ -11,7 +11,8 @@ const {
   remove,
   createMany,
   searchCollection,
-  joinCollection
+  joinCollection,
+  findInCollection
 } = require('../controllers/index')
 
 Router.get('/:collection', findCollection)
@@ -23,5 +24,6 @@ Router.post('/createmany/:collection', createMany)
 Router.post('/query/:collection', queryCollection)
 Router.post('/search/:collection', searchCollection)
 Router.post('/join/:collection', joinCollection)
+Router.post('/in/:collection', findInCollection)
 
 module.exports = Router
